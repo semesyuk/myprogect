@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="first_form">
+    <form action="/registration" method="post" autocomplete="on">
+        <lable for="name">name</lable>
+        <br>
+        <input type="text" name="name">
+        <br>
+        <lable for="last_name">last_name</lable>
+        <br>
+        <input type="text" name="last_name">
+        <br>
+        <lable for="phone_numbe">phone_numbe</lable>
+        <br>
+        <input type="text" name="phone_numbe">
+        <br>
+        <lable for="email">email</lable>
+        <br>
+        <input type="text" name="email">
+        <br>
+        <lable for="password">password</lable>
+        <br>
+        <input type="text" name="password">
+        <br>
+        <input type="submit">
+    </form>
+    <button><a href="/">Login</a></button>
+</div>
+{% endblock %}

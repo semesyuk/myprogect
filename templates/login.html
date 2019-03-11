@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div id="first_form">
+        <form action="/" method="post" autocomplete="on">
+            <lable for="name">Login</lable>
+            <br>
+            <input type="text" name="name">
+            <br>
+            <lable for="password">Password</lable>
+            <br>
+            <input type="text" name="password">
+            <br>
+            <input type="submit">
+        </form>
+        <button><a href="/users">Users</a></button>
+    </div>
+</div>
+{% endblock %}

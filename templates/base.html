@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<div id="first_form">
+    <nav>
+        <button><a href="/">Login</a></button>
+        <button><a href="/registration">Registration</a></button>
+        <button><a href="/users">Users</a></button>
+    </nav>
+    <div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    <button>
+        <a href="/logout">exit</a>
+    </button>
+    </div>
+</div>
+    {% block content %}{% endblock %}
+</body>
+</html>

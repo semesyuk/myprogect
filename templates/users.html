@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="first_form">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th>USER ID</th>
+          <th>NAME</th>
+          <th>LAST NAME</th>
+          <th>NAMBE PHONE</th>
+          <th>EMAIL</th>
+          <th>PASSWORD</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>USER ID</th>
+          <th>NAME</th>
+          <th>LAST NAME</th>
+          <th>NAMBE PHONE</th>
+          <th>EMAIL</th>
+          <th>PASSWORD</th>
+        </tr>
+      </tfoot>
+      <tbody>
+      {% for user in all_users %}
+        <tr>
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.phone_numbe}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.password}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock %}
