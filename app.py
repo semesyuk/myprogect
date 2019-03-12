@@ -40,7 +40,7 @@ def login():
             if bcrypt.check_password_hash(user.password, password):
                 login_user(user)
                 flash(f"hello {user.name}")
-                return redirect(url_for('/users'))
+                return redirect(url_for('users'))
             return redirect(url_for('login'))
         flash('Credentials dont match')
         return redirect(url_for('registration'))
